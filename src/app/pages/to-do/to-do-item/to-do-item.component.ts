@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ToDoItem } from '../../../shared/model/to-do-item';
+import { ToDoItem, ToDoItemStatus } from '../../../shared/model/to-do-item';
+import { MatRadioChange } from '@angular/material/radio';
 
 @Component({
   selector: '[app-to-do-item]',
@@ -26,10 +27,21 @@ export class ToDoItemComponent implements OnInit {
     if (this.toDoItemTempTitle.trim()) {
       //  Save the Todo
       this.toDoItem.title = this.toDoItemTempTitle;
+    } else {
+      setTimeout(() => {
+        this.toDoItemTempTitle = this.toDoItem.title;
+      }, 200);
     }
   }
 
   deleteToDo() {
     this.toDoItemDelete.emit();
+  }
+
+  setToDoItemComplete(event: MatRadioChange) {
+    console.log(event);
+    this.toDoItem.status = event.value
+      ? ToDoItemStatus.completed
+      : ToDoItemStatus.open;
   }
 }

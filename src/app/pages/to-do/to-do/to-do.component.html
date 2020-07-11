@@ -9,12 +9,13 @@
       Your Agenda
     </h5>
 
-    <div class="to-do-list list-group list-group-flush">
+    <ul class="to-do-list list-group list-group-flush">
       <li class="list-group-item"
         (toDoItemDelete)="removeToDo(toDoItemIndex)"
+          [toDoItem]="toDoItem"
         *ngFor="let toDoItem of todoList; let toDoItemIndex = index"
         app-to-do-item
       ></li>
-    </div>
+    </ul>
   </div>
 </div>
