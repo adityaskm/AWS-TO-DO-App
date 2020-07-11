@@ -1,6 +1,7 @@
 <div class="to-do-item">
   <mat-icon
     matRipple
+    matTooltip="Complete"
     class="to-do-item-action to-do-item-action-complete"
     [ngClass]="{
       'to-do-item-action-complete-active': toDoItem.status === 2,
@@ -12,6 +13,7 @@
   </mat-icon>
   <mat-icon
     matRipple
+    matTooltip="In Progress"
     class="to-do-item-action to-do-item-action-inprogress"
     [ngClass]="{
       'to-do-item-action-inprogress-active': toDoItem.status === 1,
@@ -21,21 +23,31 @@
   >
     schedule
   </mat-icon>
-  <input
+  <span appClickOutside (clickOutside)="saveToDo()">
+  <textarea
+    appAutoResize
     class="to-do-item-title"
-    [ngClass]="{ 'to-do-item-title-editing': toDoItem.editing }"
+    [ngClass]="{
+      'to-do-item-title-editing': toDoItem.editing,
+      'to-do-item-title-completed': toDoItem.status === 2,
+      'to-do-item-title-inprogress': toDoItem.status === 1
+    }"
     [(ngModel)]="toDoItemTempTitle"
     (focus)="editToDo()"
     (blur)="saveToDo()"
-  />
+    rows="1"
+  ></textarea>
+    </span>
   <mat-icon
     class="float-right to-do-item-action to-do-item-action-edit"
     (click)="editToDo()"
+    matTooltip="Edit"
     *ngIf="!toDoItem.editing"
     >edit</mat-icon
   >
   <mat-icon
     class="float-right to-do-item-action to-do-item-action-save"
+    matTooltip="Save"
     *ngIf="toDoItem.editing"
     >save</mat-icon
   >

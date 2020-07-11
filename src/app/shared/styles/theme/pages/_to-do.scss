@@ -18,6 +18,10 @@
     overflow: hidden;
   }
 
+  .mat-form-field.to-do-item-title-mat-form-field {
+    width: calc(100% - 4rem - 72px);
+  }
+
   .to-do-item {
     &-action {
       vertical-align: middle;
@@ -61,7 +65,8 @@
         }
       }
 
-      &-edit, &-save {
+      &-edit,
+      &-save {
         margin-top: 6px;
         cursor: pointer;
         color: $gray-500;
@@ -78,11 +83,17 @@
       margin: 0 0.5rem;
       border: 2px solid transparent;
       transition: border-color 0.5s ease;
-      padding: 0.2rem 0.5rem;
+      padding: 4px 0.5rem;
       border-radius: 5px;
       outline: none !important;
       &-editing {
         border-color: $primary-color;
+      }
+      &-inprogress {
+        font-weight: 700;
+      }
+      &-completed {
+        text-decoration: line-through;
       }
     }
   }

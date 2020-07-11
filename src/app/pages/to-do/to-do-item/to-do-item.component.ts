@@ -18,8 +18,14 @@ export class ToDoItemComponent implements OnInit {
   ngOnInit(): void {}
 
   editToDo() {
-    this.toDoItemTempTitle = this.toDoItem.title;
-    this.toDoItem.editing = true;
+    // To be able to integrate the click outside functionality as well
+    setTimeout(
+      () => {
+        this.toDoItemTempTitle = this.toDoItem.title;
+        this.toDoItem.editing = true;
+      }, 1
+    )
+
   }
 
   saveToDo() {
