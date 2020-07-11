@@ -11,6 +11,7 @@
   margin-bottom: 0;
 }
 
+
 // Interactive list items
 //
 // Use anchor or button elements instead of `li`s or `div`s to create interactive
@@ -34,6 +35,7 @@
     background-color: $list-group-action-active-bg;
   }
 }
+
 
 // Individual list items
 //
@@ -74,6 +76,7 @@
   }
 }
 
+
 // Horizontal
 //
 // Change the layout of list group items from vertical (default) to horizontal.
@@ -103,6 +106,7 @@
     }
   }
 }
+
 
 // Flush list items
 //
@@ -134,15 +138,12 @@
   }
 }
 
+
 // Contextual variants
 //
 // Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 
 @each $color, $value in $theme-colors {
-  @include list-group-item-variant(
-    $color,
-    theme-color-level($color, -9),
-    theme-color-level($color, 6)
-  );
+  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
 }

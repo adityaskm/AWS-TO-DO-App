@@ -17,4 +17,73 @@
     padding: 1rem 0;
     overflow: hidden;
   }
+
+  .to-do-item {
+    &-action {
+      vertical-align: middle;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      transition: color 0.5s ease;
+
+      &-complete {
+        &-active {
+          color: $primary-color;
+
+          &:hover {
+            color: $pink;
+          }
+        }
+
+        &-inactive {
+          color: $gray-400;
+
+          &:hover {
+            color: lighten($primary-color, 20%);
+          }
+        }
+      }
+
+      &-inprogress {
+        &-active {
+          color: $yellow;
+
+          &:hover {
+            color: $pink;
+          }
+        }
+
+        &-inactive {
+          color: $gray-400;
+
+          &:hover {
+            color: lighten($yellow, 20%);
+          }
+        }
+      }
+
+      &-edit, &-save {
+        margin-top: 6px;
+        cursor: pointer;
+        color: $gray-500;
+
+        &:hover {
+          color: $gray-800;
+        }
+      }
+    }
+
+    &-title {
+      vertical-align: middle;
+      width: calc(100% - 4rem - 72px);
+      margin: 0 0.5rem;
+      border: 2px solid transparent;
+      transition: border-color 0.5s ease;
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      outline: none !important;
+      &-editing {
+        border-color: $primary-color;
+      }
+    }
+  }
 }
