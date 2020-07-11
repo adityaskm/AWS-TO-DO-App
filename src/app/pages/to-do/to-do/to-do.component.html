@@ -1,1 +1,20 @@
-<p>to-do works!</p>
+<div class="to-do-page">
+  <div class="to-do-title">
+    <h3 class="text-primary p-3">
+      To Do List
+    </h3>
+  </div>
+  <div class="container">
+    <h5 class="text-primary my-5">
+      Your Agenda
+    </h5>
+
+    <div class="to-do-list list-group list-group-flush">
+      <li class="list-group-item"
+        (toDoItemDelete)="removeToDo(toDoItemIndex)"
+        *ngFor="let toDoItem of todoList; let toDoItemIndex = index"
+        app-to-do-item
+      ></li>
+    </div>
+  </div>
+</div>

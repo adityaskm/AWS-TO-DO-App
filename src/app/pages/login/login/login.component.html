@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="login-page text-center">
+  <h1 class="h3 mb-3 font-weight-normal">Welcome</h1>
+  <p class="text-muted">Login to our awesome To Do App to get things Done!</p>
+  <div class="login-card">
+    <form [formGroup]="loginForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Email Address</mat-label>
+        <input
+          autocomplete="false"
+          formControlName="username"
+          matInput
+          placeholder="Email Address"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          autocomplete="false"
+          formControlName="password"
+          matInput
+          placeholder="Password"
+          type="password"
+        />
+      </mat-form-field>
+      <button
+        (click)="login()"
+        [disabled]="!loginForm.valid"
+        class="btn btn-outline-primary btn-block"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </form>
+  </div>
+</div>

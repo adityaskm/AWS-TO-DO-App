@@ -1,30 +1,28 @@
 import { NgModule } from '@angular/core';
-import {
-  Routes,
-  RouterModule,
-  PreloadingStrategy,
-  PreloadAllModules,
-} from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ROUTES } from './shared/const/routes.const';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: ROUTES.login,
     pathMatch: 'full',
   },
   {
-    path: 'login',
+    path: ROUTES.login,
     loadChildren: () =>
       import('./pages/login/login.module').then((m) => m.LoginModule),
   },
   {
-    path: 'to-do',
+    path: ROUTES.toDo,
+    // canActivate: [CanActivateGuard],
+    // canDeactivate: [CanDeactivateGuard],
     loadChildren: () =>
       import('./pages/to-do/to-do.module').then((m) => m.ToDoModule),
   },
   {
     path: '**',
-    redirectTo: 'to-do',
+    redirectTo: ROUTES.toDo,
   },
 ];
 

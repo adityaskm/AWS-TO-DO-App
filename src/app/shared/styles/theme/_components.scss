@@ -1,0 +1,37 @@
+@import "components/footer";
+
+// Misc
+.mat-form-field {
+  width: 100%;
+  //&.mat-form-field-appearance-outline {
+  //  .mat-form-field-outline {
+  //    height: 2.5rem;
+  //  }
+  //  .mat-form-field-infix {
+  //    padding: 0.5em 0;
+  //    border-top-width: 0.2em;
+  //  }
+  //}
+}
+
+.text {
+  &-sub {
+    font-size: 70%;
+  }
+
+  &-small {
+    &-80 {
+      font-size: 75%;
+    }
+
+    &-50 {
+      font-size: 50%;
+    }
+  }
+
+  &-large {
+    &-50 {
+      font-size: 150%;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.to-do-page {
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //flex-direction: column;
+  //height: 100vh;
+  overflow: auto;
+
+  .to-do-title {
+    background-color: $blue-muted;
+    color: $primary-color;
+  }
+
+  .to-do-card {
+    border-radius: 1.5rem;
+    //box-shadow: 0 0 4px 4px $gray-200;
+    padding: 1rem 0;
+    overflow: hidden;
+  }
+}
