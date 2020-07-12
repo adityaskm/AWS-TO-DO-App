@@ -1,6 +1,7 @@
 export class ToDoItem {
   id = 0;
   title = '';
+  subtitle = '';
   status: ToDoItemStatus = ToDoItemStatus.open;
   priority: ToDoItemPriority = ToDoItemPriority.medium;
   editing = true;

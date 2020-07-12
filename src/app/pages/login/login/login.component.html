@@ -24,6 +24,8 @@
       </mat-form-field>
       <button
         (click)="login()"
+        mat-raised-button
+        color="primary"
         [disabled]="!loginForm.valid"
         class="btn btn-outline-primary btn-block"
         type="submit"

@@ -14,17 +14,15 @@ export class ToDoComponent implements OnInit {
   ngOnInit(): void {}
 
   addToDo() {
-    // To be able to integrate the click outside functionality as well
-    setTimeout(
-      () => {
-        this.todoList.push(new ToDoItem());
-      }, 1
-    )
+    this.todoList.push(new ToDoItem());
   }
 
   removeToDo(todoIndex: number) {
-    if (this.todoList.length <= todoIndex) {
+    if (this.todoList.length >= todoIndex) {
       this.todoList.splice(todoIndex, 1);
+    }
+    if (!this.todoList.length) {
+      this.addToDo();
     }
   }
 }

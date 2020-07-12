@@ -75,11 +75,20 @@
           color: $gray-800;
         }
       }
+      &-delete {
+        margin-top: 6px;
+        cursor: pointer;
+        color: $gray-500;
+        &:hover {
+          color: rgb(231, 38, 112);
+        }
+      }
     }
 
-    &-title {
+    &-title,
+    &-subtitle {
+      width: calc(100% - 4rem - 112px);
       vertical-align: middle;
-      width: calc(100% - 4rem - 72px);
       margin: 0 0.5rem;
       border: 2px solid transparent;
       transition: border-color 0.5s ease;
@@ -95,6 +104,10 @@
       &-completed {
         text-decoration: line-through;
       }
+    }
+    &-subtitle {
+      margin: 0.5em 80px 0.5px 88px;
+      color: $gray-700;
     }
   }
 }
