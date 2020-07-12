@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDoItem } from '../../../shared/model/to-do-item';
+import { AuthService } from '../../../shared/services/auth.service';
 
 @Component({
   selector: 'app-to-do',
@@ -9,7 +10,7 @@ import { ToDoItem } from '../../../shared/model/to-do-item';
 export class ToDoComponent implements OnInit {
   todoList: ToDoItem[] = [new ToDoItem()];
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {}
 
@@ -24,5 +25,9 @@ export class ToDoComponent implements OnInit {
     if (!this.todoList.length) {
       this.addToDo();
     }
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
