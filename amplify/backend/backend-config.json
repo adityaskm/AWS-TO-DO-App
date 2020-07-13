@@ -1,1 +1,9 @@
-{}
+{
+	"auth": {
+		"awstodoappcf46a524": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
