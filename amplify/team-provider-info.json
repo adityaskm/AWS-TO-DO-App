@@ -10,6 +10,18 @@
             "StackName": "amplify-awstodoapp-dev-145835",
             "StackId": "arn:aws:cloudformation:ap-south-1:251869914693:stack/amplify-awstodoapp-dev-145835/3b28cdf0-c4eb-11ea-abac-028f38a10716",
             "AmplifyAppId": "d2x1i9d6i88akz"
+        },
+        "categories": {
+            "function": {
+                "awstodoapp13151fb6CustomMessage": {
+                    "REDIRECTURL": "/to-do",
+                    "EMAILSUBJECT": "Confirm Your Account For Awesome To Do App",
+                    "EMAILMESSAGE": "Would you like to sign up to our Awesome To Do App?"
+                }
+            },
+            "auth": {
+                "awstodoapp13151fb6": {}
+            }
         }
     }
 }
