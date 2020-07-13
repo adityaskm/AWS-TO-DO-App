@@ -5,7 +5,7 @@ import { ROUTES } from './shared/const/routes.const';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: ROUTES.login,
+    redirectTo: ROUTES.toDo,
     pathMatch: 'full',
   },
   {
