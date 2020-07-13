@@ -43,3 +43,17 @@
 .outline-none {
   outline: none !important;
 }
+
+.flex {
+  display: flex;
+  &--all-center {
+    @extend .flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.full-page {
+  height: 100vh;
+  overflow: auto;
+}
