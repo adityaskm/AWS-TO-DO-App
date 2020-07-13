@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "awstodoapp13151fb6_identitypool_13151fb6",
+    "identityPoolName": "amplify_todo_identity_pool",
     "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "awstod13151fb6",
-    "userPoolName": "awstodoapp13151fb6_userpool_13151fb6",
+    "userPoolName": "amplify-ToDo",
     "autoVerifiedAttributes": [
         "email"
     ],
