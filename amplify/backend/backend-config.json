@@ -1,26 +1,36 @@
 {
-	"function": {
-		"awstodoapp13151fb6CustomMessage": {
-			"build": true,
-			"providerPlugin": "awscloudformation",
-			"service": "Lambda"
-		}
-	},
-	"auth": {
-		"awstodoapp13151fb6": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [
-				{
-					"category": "function",
-					"resourceName": "awstodoapp13151fb6CustomMessage",
-					"triggerProvider": "Cognito",
-					"attributes": [
-						"Arn",
-						"Name"
-					]
-				}
-			]
-		}
-	}
+    "function": {
+        "awstodoapp13151fb6CustomMessage": {
+            "build": true,
+            "providerPlugin": "awscloudformation",
+            "service": "Lambda"
+        }
+    },
+    "auth": {
+        "awstodoapp13151fb6": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": [
+                {
+                    "category": "function",
+                    "resourceName": "awstodoapp13151fb6CustomMessage",
+                    "triggerProvider": "Cognito",
+                    "attributes": [
+                        "Arn",
+                        "Name"
+                    ]
+                }
+            ]
+        }
+    },
+    "hosting": {
+        "S3AndCloudFront": {
+            "service": "S3AndCloudFront",
+            "providerPlugin": "awscloudformation"
+        },
+        "amplifyhosting": {
+            "service": "amplifyhosting",
+            "type": "cicd"
+        }
+    }
 }

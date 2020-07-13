@@ -21,6 +21,12 @@
             },
             "auth": {
                 "awstodoapp13151fb6": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2x1i9d6i88akz",
+                    "type": "cicd"
+                }
             }
         }
     }
